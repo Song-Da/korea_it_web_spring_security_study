@@ -25,7 +25,7 @@ public class PrincipalUser implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return userRoles.stream().map(
-                userRole -> new SimpleGrantedAuthority(userRole.getRole().getRoleName()
-        ).collect(Collectors.toList()));
+                userRole -> new SimpleGrantedAuthority(userRole.getRole().getRoleName())
+        ).collect(Collectors.toList());
     }
 }
