@@ -68,5 +68,7 @@ public class AuthService {
         String password = bCryptPasswordEncoder.encode(modifyPasswordReqDto.getNewPassword());
         int result = userRepository.updatePassword(principalUser.getUserId(), password);
         return new ApiRespDto<>("success", "비밀번호 수정 성공", result);
+
+
     }
 }
