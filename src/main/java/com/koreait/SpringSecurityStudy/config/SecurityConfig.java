@@ -86,7 +86,7 @@ public class SecurityConfig {
                     "/auth/signup",
                     "/auth/signin",
                     "/oauth2/**",
-                    "/login/oauth2/**"
+                    "/login/oauth2/**", "/mail/verify"
             ).permitAll();
             auth.anyRequest().authenticated();
 
